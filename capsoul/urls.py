@@ -18,4 +18,9 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^login', capsoul.login),
+    url(r'^register', capsoul.register),
+    url(r'^users', capsoul.users),
+    url(r'^users/', capsoul.users.get_user),
+    url(r'^capsules', include('capsoul.capsules.urls')),
 ]
