@@ -5,3 +5,4 @@
 *.db
 *.xml
 *.iml
+*.sqlite3
