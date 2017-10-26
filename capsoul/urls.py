@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+import users
+import capsules
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -22,4 +24,6 @@ urlpatterns = [
     # url(r'^register', login.register),
     url(r'^users/', include('users.urls')),
     url(r'^capsules/', include('capsules.urls')),
+    url(r'^users', users.views.all_users),
+    url(r'^capsules', capsules.views.all_capsules)
 ]
