@@ -18,10 +18,12 @@ from django.contrib import admin
 import users
 import capsules
 
+from login import views as login
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    # url(r'^login', login.login),
-    # url(r'^register', login.register),
+    url(r'^login', login.login),
+    url(r'^register', login.register),
     url(r'^users/', include('users.urls')),
     url(r'^capsules/', include('capsules.urls')),
     url(r'^users', users.views.all_users),
