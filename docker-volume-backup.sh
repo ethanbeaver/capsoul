@@ -1,1 +1,1 @@
-sudo docker run --rm --volumes-from capsoul_backend -v /tmp:/backup busybox tar cvf /backup/backup.tar /code/db
+docker run --rm --volumes-from capsoul_backend -v /tmp/capsoul:/backup busybox tar cvf /backup/backup.tar /code/db
