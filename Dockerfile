@@ -14,10 +14,6 @@ COPY . /code/
 RUN pip install -U pip
 RUN pip install -Ur requirements.txt
 
-#Create DB
-RUN python /code/manage.py makemigrations
-RUN python /code/manage.py migrate
-
 EXPOSE 8000
 
 # Specify the command to run when the image is run.
