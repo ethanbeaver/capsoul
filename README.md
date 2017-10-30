@@ -47,25 +47,35 @@ Where `port` would be the number of the port you want to use.
 ## Running the Server with Docker
 #### Step 1: Install Docker
 Mac Download: https://download.docker.com/mac/stable/Docker.dmg
+
 Windows Download: https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe
+
 Linux Instructions:
-	`sudo apt-get update`
-	`sudo apt-get install \
+```
+	$ sudo apt-get update
+
+	$ sudo apt-get install \
 	 apt-transport-https \
 	 ca-certificates \
 	 curl \
-	 software-properties-common`
-	`curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
-	`sudo add-apt-repository \
+	 software-properties-common
+
+	$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+	$ sudo add-apt-repository \
 	 "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
 	 $(lsb_release -cs) \
-	 stable"`	
-	`sudo apt-get update`
-	`sudo apt-get install docker-ce`
+	 stable"
+
+	$ sudo apt-get update
+
+	$ sudo apt-get install docker-ce
+```
 
 #### Step 2: Build and Run the server
-	Run the `docker-build.sh` and `docker-run.sh` scripts in that order.
-	The server should now be running on localhost port 42000
+Run the `docker-build.sh` and `docker-run.sh` scripts in that order.
+
+The server should now be running on localhost port 42000
 
 #### Step 3: Rebuild server upon changes
-	To rebuild the server in the Docker container upon changing source files, run the `docker-rebuild.sh` script
+To rebuild the server in the Docker container upon changing source files, run the `docker-rebuild.sh` script
