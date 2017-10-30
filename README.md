@@ -66,3 +66,6 @@ Linux Instructions:
 #### Step 2: Build and Run the server
 	Run the `docker-build.sh` and `docker-run.sh` scripts in that order.
 	The server should now be running on localhost port 42000
+
+#### Step 3: Rebuild server upon changes
+	To rebuild the server in the Docker container upon changing source files, run the `docker-rebuild.sh` script
