@@ -4,6 +4,7 @@ A python based backend that uses Django to store memories.
 ## Running the server
 
 To run the server follow the steps below.
+You may either follow steps 1 and 2, or instead follow steps 1 and 2 in the docker instructions at the bottom of the page.
 
 Before you start you should have python 2.7 installed. You can download it [here](https://www.python.org/downloads/).
 
@@ -42,3 +43,26 @@ You can run the server on a different port by running the following command.
 python manage.py runserver <port>
 ```
 Where `port` would be the number of the port you want to use.
+
+## Running the Server with Docker
+#### Step 1: Install Docker
+Mac Download: https://download.docker.com/mac/stable/Docker.dmg
+Windows Download: https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe
+Linux Instructions:
+	`sudo apt-get update`
+	`sudo apt-get install \
+	 apt-transport-https \
+	 ca-certificates \
+	 curl \
+	 software-properties-common`
+	`curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
+	`sudo add-apt-repository \
+	 "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+	 $(lsb_release -cs) \
+	 stable"`	
+	`sudo apt-get update`
+	`sudo apt-get install docker-ce`
+
+#### Step 2: Build and Run the server
+	Run the `docker-build.sh` and `docker-run.sh` scripts in that order.
+	The server should now be running on localhost port 42000
