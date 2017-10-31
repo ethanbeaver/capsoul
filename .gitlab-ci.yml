@@ -1,2 +1,6 @@
 before_script:
 	python -V
+
+test:
+    script:
+      - bundle exec test
