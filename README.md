@@ -73,7 +73,7 @@ Linux Instructions:
 ```
 
 #### Step 2: Build and Run the server
-Run the `docker-build.sh` and `docker-run.sh` scripts in that order.
+Run the `docker-volume-create.sh` and `docker-build.sh` scripts in that order.
 
 The server should now be running on localhost port 42000
 
