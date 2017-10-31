@@ -1,6 +1,6 @@
 before_script:
-	- python -V
+  - python -V
 
 test:
-    script:
-      - bundle exec test
+  script:
+  - python manage.py test
