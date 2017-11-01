@@ -25,7 +25,7 @@ SECRET_KEY = 'cv%oioh0xw96#*4!yc^*ij&ozhsc14b+!bx_pi-8h)%66dfi2r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.9.6.102']
+ALLOWED_HOSTS = ['10.9.6.123', 'docker.cs.wallawalla.edu']
 
 
 # Application definition
