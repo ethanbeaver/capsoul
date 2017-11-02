@@ -6,6 +6,7 @@ import json
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, get_user_model
+from django.views.decorators.http import require_http_methods, require_POST
 
 from rest_framework.authtoken.models import Token
 
@@ -14,9 +15,8 @@ UserModel = get_user_model()
 
 # Create your views here.
 
+@require_POST
 def login(request, *args, **kwargs):
-    if request.method != 'POST':
-        return HttpResponse("Method Not Allowed",status=405)
     username = request.POST['username']
     password = request.POST['password']
     user = authenticate(request, username=username, password=password)
@@ -28,9 +28,8 @@ def login(request, *args, **kwargs):
         response =  JsonResponse({'result':'error'})
     return response
 
+@require_POST
 def register(request):
-    if request.method != 'POST':
-        return HttpResponse("Method Not Allowed",status=405)
     username = request.POST['username']
     password = request.POST['password']
     user = authenticate(request, username=username, password=password, is_active=True)
@@ -43,6 +42,7 @@ def register(request):
         response.set_cookie('session', token.key)
     return response
 
+@require_http_methods(["GET", "POST"])
 def logout(request):
     response = JsonResponse({'result':'Successfully logged out'})
     response.delete_cookie('session')
