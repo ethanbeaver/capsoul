@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'users.apps.UsersConfig',
     'capsules.apps.CapsulesConfig',
-    'corsheaders'
+    'corsheaders',
     'login.apps.LoginConfig',
 ]
 
@@ -123,7 +123,6 @@ AUTH_USER_MODEL = 'database.User'
 LOGIN_URL = '/login'
 
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
@@ -143,5 +142,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#CORS Headers fix
+# CORS Headers fix
 CORS_ORIGIN_ALLOW_ALL = True
