@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+import users
+import capsules
 
 from rest_framework.authtoken import views as rest_authtoken
 from login import views as login
@@ -27,4 +29,6 @@ urlpatterns = [
     url(r'^logout/', login.logout),
     url(r'^users/', include('users.urls')),
     url(r'^capsules/', include('capsules.urls')),
+    url(r'^users', users.views.all_users),
+    url(r'^capsules', capsules.views.all_capsules)
 ]

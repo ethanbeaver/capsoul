@@ -77,7 +77,7 @@ class User(AbstractBaseUser):
 class Capsule(models.Model):
     cid = models.AutoField(primary_key = True)
     unlocks_at = models.DateTimeField()
-    owner = models.CharField(max_length = 30)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE,related_name='+')
     contributors = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE,related_name='+')
     recipients = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE,related_name='+')
     title = models.TextField()
