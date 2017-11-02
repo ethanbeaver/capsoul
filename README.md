@@ -11,6 +11,7 @@ Before you start you should have python 2.7 installed. You can download it [here
 #### 1. Install Django
 ```
 pip install django
+pip install djangorestframework
 ```
 #### 2. Get the project running
 ```
