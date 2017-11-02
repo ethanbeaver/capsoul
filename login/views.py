@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 import json
 
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, get_user_model
 
@@ -12,10 +12,11 @@ from rest_framework.authtoken.models import Token
 # Get the User Model
 UserModel = get_user_model()
 
-
 # Create your views here.
 
 def login(request, *args, **kwargs):
+    if request.method != 'POST':
+        return HttpResponse("Method Not Allowed",status=405)
     username = request.POST['username']
     password = request.POST['password']
     user = authenticate(request, username=username, password=password)
@@ -28,6 +29,8 @@ def login(request, *args, **kwargs):
     return response
 
 def register(request):
+    if request.method != 'POST':
+        return HttpResponse("Method Not Allowed",status=405)
     username = request.POST['username']
     password = request.POST['password']
     user = authenticate(request, username=username, password=password, is_active=True)
