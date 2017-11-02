@@ -16,12 +16,15 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+from rest_framework.authtoken import views as rest_authtoken
 from login import views as login
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^login', login.login),
-    url(r'^register', login.register),
+    url(r'^token-auth/', rest_authtoken.obtain_auth_token),
+    url(r'^login/', login.login),
+    url(r'^register/', login.register),
+    url(r'^logout/', login.logout),
     url(r'^users/', include('users.urls')),
     url(r'^capsules/', include('capsules.urls')),
 ]
