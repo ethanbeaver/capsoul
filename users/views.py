@@ -15,6 +15,11 @@ def all_users(request):
         all_users = User.objects.all().values('user_name', 'first_name', 'last_name')
         return JsonResponse({'users': list(all_users)}, status=200)
     else:
+        updated_fields = {'user_name': request.user.user_name}
+        for field in request.POST:
+            updated_fields[field] = request.POST.get(field)
+        current_user = User(**updated_fields)
+        current_user.save()
         return JsonResponse({"status": "resource created"}, status=200)
 
 
