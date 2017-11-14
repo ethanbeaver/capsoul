@@ -9,6 +9,7 @@ from django.views.decorators.http import require_http_methods, require_GET
 
 from database.models import User
 
+
 @require_http_methods(["GET", "POST"])
 def all_users(request):
     if request.method == 'GET':
