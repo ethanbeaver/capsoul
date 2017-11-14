@@ -1,9 +1,10 @@
+
 # Start with a Python image.
-FROM python:latest
+FROM python:3.5
 
 # Install some necessary things.
 RUN apt-get update
-RUN apt-get install -y libssl-dev 
+RUN apt-get install -y --no-install-recommends libssl-dev=1.0.2
 
 # Copy all our files into the image.
 RUN mkdir /code
@@ -11,7 +12,7 @@ WORKDIR /code
 COPY . /code/
 
 # Install our requirements.
-RUN pip install -U pip
+RUN pip install -U pip=9
 RUN pip install -Ur requirements.txt
 
 RUN python /code/manage.py makemigrations

@@ -2,9 +2,7 @@
 from __future__ import unicode_literals
 import json
 
-from django.core import serializers
-from django.http import HttpResponse, JsonResponse
-from django.shortcuts import render
+from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods, require_GET
 
 from database.models import User

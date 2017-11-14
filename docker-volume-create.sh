@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 wget http://docker.cs.wallawalla.edu/public/capsoul-db.tar -P ~/backups/capsoul/
 docker volume create --name capsoul-db
 docker create -v /code/db --name capsoul-db-restore busybox true
