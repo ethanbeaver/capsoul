@@ -6,6 +6,12 @@ source =
 	*/signals.py
 	*/urls.py
 	*/apps.py
+omit =
+	database/migrations/*
+	capsoul/*
+	*/admin.py
+	*/apps.py
+	*/tests.py
 
 [report]
 exclude_lines =
@@ -15,6 +21,8 @@ exclude_lines =
     if __name__ == .__main__.:
 ignore_errors = True
 omit =
-    tests/*
-    database/migrations/*
-    capsoul/*
+	database/migrations/*
+	capsoul/*
+	*/admin.py
+	*/apps.py
+	*/tests.py
