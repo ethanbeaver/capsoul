@@ -1,13 +1,6 @@
 [run]
 branch = True
-source =
-	capsoul
-	capsules
-	database
-	login
-	users
-	.
-omit = database/migrations/*
+omit = database/migrations
 
 [report]
 exclude_lines =
