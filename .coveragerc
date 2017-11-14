@@ -1,5 +1,11 @@
 [run]
 branch = True
+source = 
+	*/views.py
+	*/models.py
+	*/signals.py
+	*/urls.py
+	*/apps.py
 
 [report]
 exclude_lines =
@@ -11,3 +17,4 @@ ignore_errors = True
 omit =
     tests/*
     database/migrations/*
+    capsoul/*
