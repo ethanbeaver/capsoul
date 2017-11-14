@@ -12,3 +12,8 @@ exclude_lines =
 ignore_errors = True
 omit =
 	database/migrations/*
+	capsoul/*
+	*/admin.py
+	*/apps.py
+	*/tests.py
+	*/settings.py
