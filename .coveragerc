@@ -1,6 +1,12 @@
 [run]
 branch = True
-omit = */migrations/*
+source =
+	capsoul
+	capsules
+	database
+	login
+	users
+omit = database/migrations/*
 
 [report]
 exclude_lines =
@@ -11,4 +17,3 @@ exclude_lines =
 ignore_errors = True
 omit =
     tests/*
-    database/migrations/*
