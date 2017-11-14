@@ -7,6 +7,8 @@ install:
   - pip install coverage
   - pip install codecov
   - pip install -r requirements.txt
+before_script:
+  - ./manage.py migrate
 script:
   - coverage run ./manage.py test
 after_success:
