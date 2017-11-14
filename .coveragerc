@@ -1,18 +1,7 @@
 [run]
 branch = True
 include = 
-	*/views.py
-	*/models.py
-	*/signals.py
-	*/urls.py
-	*/apps.py
-omit =
-	database/migrations/*
-	capsoul/*
-	*/admin.py
-	*/apps.py
 	*/tests.py
-	*/settings.py
 
 [report]
 exclude_lines =
@@ -23,7 +12,3 @@ exclude_lines =
 ignore_errors = True
 omit =
 	database/migrations/*
-	capsoul/*
-	*/admin.py
-	*/apps.py
-	*/tests.py
