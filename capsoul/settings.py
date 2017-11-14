@@ -145,5 +145,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+ROOT_MEDIA = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 # CORS Headers fix
 CORS_ORIGIN_ALLOW_ALL = True
