@@ -1,6 +1,5 @@
 [run]
 branch = True
-source = capsoul
 
 [report]
 exclude_lines =
