@@ -1,3 +1,6 @@
+[![codecov](https://codecov.io/gh/ethanbeaver/capsoul/branch/develop/graph/badge.svg)](https://codecov.io/gh/ethanbeaver/capsoul)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1d5319cfc2b849babd7b9b46caf21e7f)](https://www.codacy.com/app/ethanbeaver/capsoul?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ethanbeaver/capsoul&amp;utm_campaign=Badge_Grade)
+
 # Capsoul Backend
 A python based backend that uses Django to store memories.
 
