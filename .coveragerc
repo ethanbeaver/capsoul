@@ -6,6 +6,7 @@ source =
 	database
 	login
 	users
+	.
 omit = database/migrations/*
 
 [report]
