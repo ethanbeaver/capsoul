@@ -12,7 +12,7 @@ from database.models import Capsule
 @require_http_methods(["GET", "POST"])
 def all_capsules(request):
     if request.method == 'GET':
-        all_capsules = Capsule.objects.all().values('title', 'description', 'recipients')
+        all_capsules = Capsule.objects.all().values('cid', 'title', 'unlocks_at', 'recipients', 'owner')
         return JsonResponse({'capsules': list(all_capsules)}, status=200)
     else:
         return JsonResponse({"status": "resource created"}, status=200)

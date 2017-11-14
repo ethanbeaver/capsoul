@@ -82,9 +82,9 @@ class User(AbstractBaseUser, PermissionsMixin):
 class Capsule(models.Model):
     cid = models.AutoField(primary_key = True)
     unlocks_at = models.DateTimeField()
-    owner = models.ForeignKey(User, on_delete=models.CASCADE,related_name='+')
-    contributors = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE,related_name='+')
-    recipients = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE,related_name='+')
+    owner = models.TextField()
+    contributors = models.TextField()
+    recipients = models.TextField()
     title = models.TextField()
     description = models.TextField()
     media = models.FileField(upload_to='media', blank=True)
