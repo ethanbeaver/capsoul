@@ -2,6 +2,11 @@
 branch = True
 include = 
 	*/tests.py
+	*/views.py
+	*/models.py
+	*/signals.py
+	*/urls.py
+	*/apps.py
 
 [report]
 exclude_lines =
