@@ -24,3 +24,4 @@ omit =
 	*/apps.py
 	*/tests.py
 	*/settings.py
+	*/urls.py
