@@ -1,6 +1,6 @@
 [run]
 branch = True
-omit = database/migrations
+source = *
 
 [report]
 exclude_lines =
@@ -11,3 +11,4 @@ exclude_lines =
 ignore_errors = True
 omit =
     tests/*
+    database/migrations/*
