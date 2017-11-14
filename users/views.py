@@ -16,8 +16,9 @@ def all_users(request):
         all_users = User.objects.all().values('username', 'first_name', 'last_name')
         return JsonResponse({'users': list(all_users)}, status=200)
     else:
-        fields = json.loads(request.body)
-        fields['username'] = request.user.user_name
+        fields = json.loads(request.body.decode('utf-8'))
+        # fields['username'] = request.user.user_name
+        fields['username'] = 'beavet'
         current_user = User(**fields)
         current_user.save()
         return JsonResponse({"status": "resource created"}, status=200)
