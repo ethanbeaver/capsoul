@@ -7,6 +7,6 @@ from django.test import TestCase, Client
 class CapsuleViewsTestCase(TestCase):
 	def testStaticMethod(self):
 		client = Client()
-		response = client.get('/capsules/1/letters/2').content
+		response = client.get('/capsules/1/letters/2').content.decode('utf8')
 		self.assertEqual(response, '{"owner": "rabery", "text": "Hey, I made this capsule for you! Hope you like it", "title": "Best Wishes"}')
 		
