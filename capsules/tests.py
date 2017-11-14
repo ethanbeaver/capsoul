@@ -18,7 +18,7 @@ class CapsuleViewsTestCase(TestCase):
 
 	def testGetSpecificCapsule(self):
 		response = self.client.get('/capsules/1').content.decode('utf8')
-		self.assertJSONEqual(response, '{"capsules": [{"letters": "", "contributors": "[u\'fennma\', u\'delejo\']", "recipients": "beavet", "title": "Winter Surprise", "media": "", "cid": 1, "comments": "", "owner": "rabery", "unlocks_at": "2017-12-10T14:30:00Z", "description": "A capsule that Ryan made for Ethan for being such a good ASWWU employee"}]}')
+		self.assertJSONEqual(response, '{"capsules": [{"letters": "", "contributors": "[\'fennma\', \'delejo\']", "recipients": "beavet", "title": "Winter Surprise", "media": "", "cid": 1, "comments": "", "owner": "rabery", "unlocks_at": "2017-12-10T14:30:00Z", "description": "A capsule that Ryan made for Ethan for being such a good ASWWU employee"}]}')
 
 	def testPostCreateCapsule(self):
 		response = self.client.post('/capsules')
